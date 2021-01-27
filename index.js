@@ -52,12 +52,10 @@ module.exports = class Stonks extends (
         final.push(piece);
         return;
       }
-      console.log(`Found match: ${piece}`);
-      const words = piece.split(" ");
+      const words = piece.split(/(\$[A-Z]{1,5})/);
       words.forEach((word) => {
         if (!word.match(tagRegex)) {
           final.push(word);
-          final.push(" ");
           return;
         }
         final.push(
@@ -67,7 +65,6 @@ module.exports = class Stonks extends (
             // sparkline: this.settings.get("sparkline", false),
           })
         );
-        final.push(" ");
       });
     });
     return final;
