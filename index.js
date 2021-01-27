@@ -66,8 +66,8 @@ module.exports = class Stonks extends (
             // graph: this.settings.get("graph", true),
             // sparkline: this.settings.get("sparkline", false),
           })
-          final.push(" ");
         );
+        final.push(" ");
       });
     });
     return final;
