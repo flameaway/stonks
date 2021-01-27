@@ -57,6 +57,7 @@ module.exports = class Stonks extends (
       words.forEach((word) => {
         if (!word.match(tagRegex)) {
           final.push(word);
+          final.push(" ");
           return;
         }
         final.push(
@@ -65,6 +66,7 @@ module.exports = class Stonks extends (
             // graph: this.settings.get("graph", true),
             // sparkline: this.settings.get("sparkline", false),
           })
+          final.push(" ");
         );
       });
     });
