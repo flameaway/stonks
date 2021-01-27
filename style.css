@@ -1,0 +1,20 @@
+.reddit-tooltip {
+  margin: auto 10px auto 5px;
+  white-space: nowrap;
+}
+
+.reddit-tooltip-wrapper {
+  display: flex;
+  margin: 0.1em;
+}
+
+.reddit-nsfw-tag {
+  padding: 0 4px;
+  margin-left: 2px;
+  background-color: red;
+  color: white;
+}
+
+.reddit-tooltip-wrapper img {
+  border-radius: 50%;
+}
