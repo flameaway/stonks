@@ -13,7 +13,7 @@ const Settings = require("./Components/Settings");
 
 const componentTypesToCheck = ["u", "em", "strong"];
 
-const tagRegex = /\$[A-Z]{1,5}/g;
+const tagRegex = /\$?\b[A-Z]{1,5}\b/g;
 
 module.exports = class Stonks extends (
   Plugin
@@ -52,9 +52,10 @@ module.exports = class Stonks extends (
         final.push(piece);
         return;
       }
-      const words = piece.split(/(\$[A-Z]{1,5})/);
+      const words = piece.split(/(\$?\b[A-Z]{1,5}\b)/);
+
       words.forEach((word) => {
-        if (!word.match(tagRegex)) {
+        if (!word.match(tagRegex) || word == "I") {
           final.push(word);
           return;
         }
@@ -75,3 +76,4 @@ module.exports = class Stonks extends (
     // powercord.api.settings.unregisterSettings("stonks");
   }
 };
+

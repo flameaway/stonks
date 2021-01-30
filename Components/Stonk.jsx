@@ -20,15 +20,15 @@ class SymbolLink extends React.Component {
     const _this = this;
 
     // Filter out the leading / if it has one
-    const tag = symbol.match(/\$([A-Z]{1,5})/)[1];
-
+    symbol.replace("$", "")
+    
     return (
       // <Tooltip position={"top"} text={this.state.tooltip}>
       <span {...this.props}>
         <a
-          title={`https://www.cnbc.com/quotes/${tag}`}
+          title={`https://finviz.com/quote.ashx?t=${symbol}`}
           rel={"noreferrer noopener"}
-          href={`https://www.cnbc.com/quotes/${tag}`}
+          href={`https://finviz.com/quote.ashx?t=${symbol}`}
           role={"button"}
           target={"_blank"}
         >
@@ -131,3 +131,4 @@ class SymbolLink extends React.Component {
 }
 
 module.exports = SymbolLink;
+

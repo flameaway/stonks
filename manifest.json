@@ -1,8 +1,8 @@
 {
-    "name": "Stonks",
-    "version": "1.0.0",
+    "name": "Stonksv2",
+    "version": "1.1.0",
     "description": "A small plugin that formats stock symbols into clickable links",
-    "author": "rodentman87",
+    "author": "flameaway & rodentman87",
     "license": "MIT",
     "permissions": "ext_api"
 }
