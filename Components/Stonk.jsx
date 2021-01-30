@@ -20,19 +20,19 @@ class SymbolLink extends React.Component {
     const _this = this;
 
     // Filter out the leading / if it has one
-    symbol.replace("$", "")
+    let tag = symbol.replace("$", "");
     
     return (
       // <Tooltip position={"top"} text={this.state.tooltip}>
       <span {...this.props}>
         <a
-          title={`https://finviz.com/quote.ashx?t=${symbol}`}
+          title={`https://robinhood.com/stocks/${tag}`}
           rel={"noreferrer noopener"}
-          href={`https://finviz.com/quote.ashx?t=${symbol}`}
+          href={`https://robinhood.com/stocks/${tag}`}
           role={"button"}
           target={"_blank"}
         >
-          {symbol}
+          ${tag}
         </a>
       </span>
       /* </Tooltip> */
